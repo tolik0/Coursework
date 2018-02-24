@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c903f21-5ca7-47a8-8d42-13840bf9b364" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/Theme_of_coursework.docx" afterPath="$PROJECT_DIR$/docs/Theme_of_coursework.docx" />
-      <change beforePath="$PROJECT_DIR$/file.json" afterPath="$PROJECT_DIR$/file.json" />
-      <change beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
-    </list>
+    <list default="true" id="3c903f21-5ca7-47a8-8d42-13840bf9b364" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
