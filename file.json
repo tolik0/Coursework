@@ -1,61 +1,339 @@
 {
-    "Teriyaki Chicken": [
-        "1/2 cup (125ml) mirin",
-        "1/2 cup (125ml) soy sauce",
-        "One 2-inch (5cm) piece of fresh ginger, peeled and grated",
-        "2-pounds (900g) boneless chicken thighs (4-8 thighs, depending on size)"
-    ],
-    "Chicken Vesuvio": [
-        "1/2 cup olive oil",
-        "5 cloves garlic, peeled",
-        "2 large russet potatoes, peeled and cut into chunks",
-        "1 3-4 pound chicken, cut into 8 pieces (or 3 pound chicken legs)",
-        "3/4 cup white wine",
-        "3/4 cup chicken stock",
-        "3 tablespoons chopped parsley",
-        "1 tablespoon dried oregano",
-        "Salt and pepper",
-        "1 cup frozen peas, thawed"
-    ],
-    "Chicken Teriyaki": [
-        "1 tbsp. vegetable oil",
-        "4 pieces chicken, trimmed, skin pierced with a fork",
-        "½ cup Teriyaki Sauce"
-    ],
-    "Chicken Satay": [
-        "100.0ml soy sauce (Kikkoman is good)",
-        "4.0 tbsp smooth peanut butter",
-        "4 skinless chicken breasts fillets"
-    ],
-    "Chicken Piccata": [
-        "4 boneless, skinless chicken breast halves, patted dry (2 1/2 to 3 pounds total)",
-        "Kosher salt and freshly ground black pepper",
-        "1/2 cup all-purpose flour",
-        "2 tablespoons olive oil",
-        "4 tablespoons unsalted butter",
-        "2 tablespoons fresh lemon juice",
-        "1 tablespoon capers, drained",
-        "2 tablespoons chopped fresh flat-leaf parsley"
-    ],
-    "Baked Chicken": [
-        "6 bone-in chicken breast halves, or 6 chicken thighs and wings, skin-on",
-        "1/2 teaspoon coarse salt",
-        "1/2 teaspoon Mrs. Dash seasoning",
-        "1/4 teaspoon freshly ground black pepper"
-    ],
-    "Catalan Chicken": [
-        "1 whole 4-pound chicken, quartered",
-        "8 slices bacon",
-        "30 cloves garlic",
-        "3 lemons, peeled, rinds thinly sliced and reserved",
-        "½ cup Banyuls or another fortified dessert wine",
-        "1 cup veal or chicken stock"
-    ],
-    "Roast Chicken": [
-        "1-1/2 Tbs. olive oil",
-        "2 tsp. granulated sugar",
-        "3-1/2 to 4-lb. whole chicken",
-        "Freshly ground black pepper",
-        "2 Tbs. kosher salt"
-    ]
+    "Whole Roasted Suckling Pig Recipe": {
+        "url": "http://www.seriouseats.com/recipes/2011/12/whole-roasted-suckling-pig-recipe.html",
+        "ingredients": [
+            {
+                "text": "1 whole suckling pig, about 20 pounds (see note)",
+                "weight": 9071.84765625
+            },
+            {
+                "text": "Kosher salt and freshly ground black pepper",
+                "weight": 54.8810859375
+            },
+            {
+                "text": "Kosher salt and freshly ground black pepper",
+                "weight": 27.44054296875
+            },
+            {
+                "text": "20 whole cloves garlic",
+                "weight": 60.0
+            },
+            {
+                "text": "1 six-inch piece of fresh ginger, cut into 1/2-inch slivers",
+                "weight": 15.0
+            }
+        ]
+    },
+    "Whole Roast Suckling Pig recipes": {
+        "url": "http://www.chowhound.com/recipes/whole-roasted-suckling-pig-13693",
+        "ingredients": [
+            {
+                "text": "1 (12- to 18-pound) whole suckling pig",
+                "weight": 6803.8857421875
+            },
+            {
+                "text": "15 quarts water",
+                "weight": 14195.2939453125
+            },
+            {
+                "text": "6 1/2 cups kosher salt",
+                "weight": 1514.5
+            },
+            {
+                "text": "4 1/2 cups granulated sugar",
+                "weight": 900.0
+            },
+            {
+                "text": "1/2 cup vegetable oil, for basting",
+                "weight": 110.40784454345703
+            }
+        ]
+    },
+    "Roast Suckling Pig": {
+        "url": "http://www.cookstr.com/recipes/roast-suckling-pig",
+        "ingredients": [
+            {
+                "text": "2 sprigs fresh thyme",
+                "weight": 6.0
+            },
+            {
+                "text": "Vegetable oil",
+                "weight": 108.57540576171874
+            },
+            {
+                "text": "2 lemons , halved",
+                "weight": 116.0
+            },
+            {
+                "text": "Salt and freshly milled pepper",
+                "weight": 47.90091430664063
+            },
+            {
+                "text": "Salt and freshly milled pepper",
+                "weight": 23.950457153320315
+            },
+            {
+                "text": "6 tart apples , quartered",
+                "weight": 1047.5999755859375
+            },
+            {
+                "text": "1 suckling pig (14 to 16 pounds)",
+                "weight": 6803.8857421875
+            },
+            {
+                "text": "2 sprigs fresh rosemary",
+                "weight": 10.0
+            }
+        ]
+    },
+    "Purple Pig's pig ears with kale": {
+        "url": "http://www.latimes.com/food/la-fo-sos-pigears-20120616-story.html",
+        "ingredients": [
+            {
+                "text": "1 pound pig ears (about 2 ears)",
+                "weight": 226.0
+            },
+            {
+                "text": "4 gallons water, divided",
+                "weight": 15141.6474609375
+            },
+            {
+                "text": "1 cup diced carrot",
+                "weight": 122.0
+            },
+            {
+                "text": "1 cup diced celery",
+                "weight": 101.0
+            },
+            {
+                "text": "1 cup diced onion",
+                "weight": 160.0
+            },
+            {
+                "text": "1 cup milk",
+                "weight": 244.0
+            },
+            {
+                "text": "1 cup instant flour, such as wondra",
+                "weight": 125.0
+            },
+            {
+                "text": "Frying oil",
+                "weight": 233.15490080566406
+            },
+            {
+                "text": "Salt",
+                "weight": 102.86245623779297
+            },
+            {
+                "text": "1 bunch kale (about 10 ounces), torn into 2-inch pieces",
+                "weight": 283.4952392578125
+            },
+            {
+                "text": "6 to 8 pickled cherry peppers, julienned",
+                "weight": 462.0
+            },
+            {
+                "text": "6 to 8 fried eggs",
+                "weight": 257.6000061035156
+            },
+            {
+                "text": "1 to 2 tablespoons oil",
+                "weight": 21.0
+            },
+            {
+                "text": "Pepper",
+                "weight": 51.431228118896485
+            }
+        ]
+    },
+    "Pickled Pig Feet": {
+        "url": "http://www.foodista.com/recipe/H87M25VB/pickled-pig-feet",
+        "ingredients": [
+            {
+                "text": "4 pig feet",
+                "weight": 453.6000061035156
+            },
+            {
+                "text": "1/2 gallon water",
+                "weight": 1892.7059326171875
+            },
+            {
+                "text": "1 cup vinegar",
+                "weight": 238.0
+            },
+            {
+                "text": "1/2 stalk celery",
+                "weight": 20.0
+            },
+            {
+                "text": "1/2 sm. onion",
+                "weight": 62.5
+            },
+            {
+                "text": "Dash of salt and black pepper",
+                "weight": 0.4000000059604645
+            },
+            {
+                "text": "Dash of salt and black pepper",
+                "weight": 0.10000000149011612
+            }
+        ]
+    },
+    "Rugby BBQ Pig": {
+        "url": "http://www.foodnetwork.com/recipes/rugby-bbq-pig-recipe.html",
+        "ingredients": [
+            {
+                "text": "1 whole pig",
+                "weight": 6342.0
+            },
+            {
+                "text": "1 small can tomato paste",
+                "weight": 142.0
+            },
+            {
+                "text": "I big can chipotle peppers",
+                "weight": 255.0
+            },
+            {
+                "text": "1 1/2 cups red pepper flakes",
+                "weight": 125.39176177978516
+            },
+            {
+                "text": "Pinch black peppercorns",
+                "weight": 0.14374999701976776
+            },
+            {
+                "text": "2 cups apple juice",
+                "weight": 496.0
+            },
+            {
+                "text": "1/2 gallon apple cider",
+                "weight": 1984.0
+            }
+        ]
+    },
+    "Crispy Grilled Pig's Tails Recipe": {
+        "url": "http://www.seriouseats.com/recipes/2012/05/grilled-pigs-tails.html",
+        "ingredients": [
+            {
+                "text": "6 pig tails (1 1/2 to 2 pounds)",
+                "weight": 793.78662109375
+            },
+            {
+                "text": "2 quarts stock low sodium store-bought or homemade chicken broth (or water)",
+                "weight": 1920.0
+            },
+            {
+                "text": "Kosher salt",
+                "weight": 16.2827197265625
+            },
+            {
+                "text": "Olive oil",
+                "weight": 36.907498046875
+            }
+        ]
+    },
+    "Roast Whole Suckling Pig": {
+        "url": "http://chubbyhubby.net/recipes/roast-whole-suckling-pig/",
+        "ingredients": [
+            {
+                "text": "1 small suckling pig, gutted and cleaned, with the kidneys left within",
+                "weight": 4756.5
+            },
+            {
+                "text": "olive oil",
+                "weight": 96.60487443847656
+            },
+            {
+                "text": "sea salt and black pepper",
+                "weight": 42.61979754638672
+            },
+            {
+                "text": "sea salt and black pepper",
+                "weight": 21.30989877319336
+            },
+            {
+                "text": "4 red onions",
+                "weight": 500.0
+            },
+            {
+                "text": "a dollop of duck fat",
+                "weight": 1268.0
+            },
+            {
+                "text": "375 ml red wine",
+                "weight": 372.7995910644531
+            },
+            {
+                "text": "kidneys of the pig, chopped",
+                "weight": 0.0
+            },
+            {
+                "text": "1/2 loaf of day-old white bread, cubed",
+                "weight": 192.0
+            },
+            {
+                "text": "2 cloves of garlic, peeled and crushed",
+                "weight": 6.0
+            },
+            {
+                "text": "8 sage leaves, chopped",
+                "weight": 8.0
+            }
+        ]
+    },
+    "Oven Roasted Suckling Pig, German Style recipes": {
+        "url": "http://www.cookingchanneltv.com/recipes/oven-roasted-suckling-pig-german-style.html",
+        "ingredients": [
+            {
+                "text": "One 13 to 18-pound suckling pig",
+                "weight": 7030.681640625
+            },
+            {
+                "text": "2 cups kosher salt",
+                "weight": 466.0
+            },
+            {
+                "text": "black pepper",
+                "weight": 27.82270609474182
+            },
+            {
+                "text": "1/2 cup fennel seed",
+                "weight": 45.74039077758789
+            },
+            {
+                "text": "1/2 cup fresh marjoram",
+                "weight": 26.81333351135254
+            },
+            {
+                "text": "4 onions, quartered",
+                "weight": 500.0
+            },
+            {
+                "text": "3 heads garlic, cloves peeled and separated",
+                "weight": 150.0
+            },
+            {
+                "text": "2 apples, halved",
+                "weight": 364.0
+            },
+            {
+                "text": "1 lemon, halved",
+                "weight": 58.0
+            },
+            {
+                "text": "1 bunch fresh thyme",
+                "weight": 15.0
+            },
+            {
+                "text": "1 to 2 cups olive oil",
+                "weight": 324.0
+            },
+            {
+                "text": "2 cups white wine or water",
+                "weight": 294.0
+            }
+        ]
+    }
 }
