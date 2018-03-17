@@ -1,338 +1,394 @@
 {
-    "Whole Roasted Suckling Pig Recipe": {
-        "url": "http://www.seriouseats.com/recipes/2011/12/whole-roasted-suckling-pig-recipe.html",
+    "Curried Chicken & Apple Salad": {
+        "url": "http://www.finecooking.com/recipes/curried-chicken-and-apple-salad.aspx",
         "ingredients": [
             {
-                "text": "1 whole suckling pig, about 20 pounds (see note)",
-                "weight": 9071.84765625
+                "text": "1 Tbs. chopped shallot",
+                "weight": 10.0
             },
             {
-                "text": "Kosher salt and freshly ground black pepper",
-                "weight": 54.8810859375
+                "text": "1 tsp. curry powder",
+                "weight": 2.0
             },
             {
-                "text": "Kosher salt and freshly ground black pepper",
-                "weight": 27.44054296875
+                "text": "1/2 tsp. finely grated fresh ginger",
+                "weight": 1.0
             },
             {
-                "text": "20 whole cloves garlic",
-                "weight": 60.0
+                "text": "1 cup chopped or shredded leftover Yogurt-Marinated Butterflied Chicken",
+                "weight": 140.0
             },
             {
-                "text": "1 six-inch piece of fresh ginger, cut into 1/2-inch slivers",
-                "weight": 15.0
-            }
-        ]
-    },
-    "Whole Roast Suckling Pig recipes": {
-        "url": "http://www.chowhound.com/recipes/whole-roasted-suckling-pig-13693",
-        "ingredients": [
-            {
-                "text": "1 (12- to 18-pound) whole suckling pig",
-                "weight": 6803.8857421875
+                "text": "1/3 cup small-diced seeded English cucumber",
+                "weight": 34.666666666666664
             },
             {
-                "text": "15 quarts water",
-                "weight": 14195.2939453125
+                "text": "1/3 cup small-diced sweet or sweet-tart apple, such as Golden Delicious or Fuji",
+                "weight": 36.33333333333333
             },
             {
-                "text": "6 1/2 cups kosher salt",
-                "weight": 1514.5
-            },
-            {
-                "text": "4 1/2 cups granulated sugar",
-                "weight": 900.0
-            },
-            {
-                "text": "1/2 cup vegetable oil, for basting",
-                "weight": 110.40784454345703
-            }
-        ]
-    },
-    "Roast Suckling Pig": {
-        "url": "http://www.cookstr.com/recipes/roast-suckling-pig",
-        "ingredients": [
-            {
-                "text": "2 sprigs fresh thyme",
+                "text": "2 Tbs. chopped fresh cilantro or mint (or both)",
                 "weight": 6.0
             },
             {
-                "text": "Vegetable oil",
-                "weight": 108.57540576171874
+                "text": "2 Tbs. whole-milk yogurt",
+                "weight": 28.4
             },
             {
-                "text": "2 lemons , halved",
-                "weight": 116.0
+                "text": "2 Tbs. mayonnaise",
+                "weight": 29.2
             },
             {
-                "text": "Salt and freshly milled pepper",
-                "weight": 47.90091430664063
-            },
-            {
-                "text": "Salt and freshly milled pepper",
-                "weight": 23.950457153320315
-            },
-            {
-                "text": "6 tart apples , quartered",
-                "weight": 1047.5999755859375
-            },
-            {
-                "text": "1 suckling pig (14 to 16 pounds)",
-                "weight": 6803.8857421875
-            },
-            {
-                "text": "2 sprigs fresh rosemary",
-                "weight": 10.0
+                "text": "1 Tbs. fresh lime juice",
+                "weight": 15.4
             }
         ]
     },
-    "Purple Pig's pig ears with kale": {
-        "url": "http://www.latimes.com/food/la-fo-sos-pigears-20120616-story.html",
+    "Chicken-Apple Sausage And Pasta Soup": {
+        "url": "http://www.wholeliving.com/130375/chicken-apple-sausage-and-pasta-soup",
         "ingredients": [
             {
-                "text": "1 pound pig ears (about 2 ears)",
-                "weight": 226.0
+                "text": "Coarse salt",
+                "weight": 6.4070828324999995
             },
             {
-                "text": "4 gallons water, divided",
-                "weight": 15141.6474609375
+                "text": "1/2 cup dried (2 ounces) whole-wheat elbow macaroni",
+                "weight": 52.5
             },
             {
-                "text": "1 cup diced carrot",
+                "text": "3 cups reduced-sodium chicken broth",
+                "weight": 720.0
+            },
+            {
+                "text": "1 cup mixed frozen vegetables",
+                "weight": 91.0
+            },
+            {
+                "text": "6 ounces chicken-apple sausage, quartered lengthwise and sliced crosswise 1/4 inch thick",
+                "weight": 170.09713875
+            },
+            {
+                "text": "1/4 cup fresh basil or parsley leaves, coarsely chopped",
+                "weight": 6.0
+            },
+            {
+                "text": "1/4 cup grated Parmesan cheese",
+                "weight": 28.25
+            }
+        ]
+    },
+    "Puréed Chicken, Apple, And Kale": {
+        "url": "http://www.bonappetit.com/recipe/pur-ed-chicken-apple-and-kale",
+        "ingredients": [
+            {
+                "text": "2 apples, peeled, cored, chopped (about 2 cups)",
+                "weight": 218.0
+            },
+            {
+                "text": "2 carrots, sliced 1/2-inch thick (about 1 cup)",
                 "weight": 122.0
             },
             {
-                "text": "1 cup diced celery",
-                "weight": 101.0
-            },
-            {
-                "text": "1 cup diced onion",
-                "weight": 160.0
-            },
-            {
-                "text": "1 cup milk",
-                "weight": 244.0
-            },
-            {
-                "text": "1 cup instant flour, such as wondra",
-                "weight": 125.0
-            },
-            {
-                "text": "Frying oil",
-                "weight": 233.15490080566406
-            },
-            {
-                "text": "Salt",
-                "weight": 102.86245623779297
-            },
-            {
-                "text": "1 bunch kale (about 10 ounces), torn into 2-inch pieces",
-                "weight": 283.4952392578125
-            },
-            {
-                "text": "6 to 8 pickled cherry peppers, julienned",
-                "weight": 462.0
-            },
-            {
-                "text": "6 to 8 fried eggs",
-                "weight": 257.6000061035156
-            },
-            {
-                "text": "1 to 2 tablespoons oil",
-                "weight": 21.0
-            },
-            {
-                "text": "Pepper",
-                "weight": 51.431228118896485
-            }
-        ]
-    },
-    "Pickled Pig Feet": {
-        "url": "http://www.foodista.com/recipe/H87M25VB/pickled-pig-feet",
-        "ingredients": [
-            {
-                "text": "4 pig feet",
-                "weight": 453.6000061035156
-            },
-            {
-                "text": "1/2 gallon water",
-                "weight": 1892.7059326171875
-            },
-            {
-                "text": "1 cup vinegar",
-                "weight": 238.0
-            },
-            {
-                "text": "1/2 stalk celery",
-                "weight": 20.0
-            },
-            {
-                "text": "1/2 sm. onion",
+                "text": "1/2 onion, chopped",
                 "weight": 62.5
             },
             {
-                "text": "Dash of salt and black pepper",
-                "weight": 0.4000000059604645
+                "text": "1 bay leaf",
+                "weight": 0.6
             },
             {
-                "text": "Dash of salt and black pepper",
-                "weight": 0.10000000149011612
+                "text": "6 ounces skinless, boneless chicken breast, cut into 1-inch pieces",
+                "weight": 170.09713875
+            },
+            {
+                "text": "1 1/4 cups no-salt or low-salt chicken broth",
+                "weight": 300.0
+            },
+            {
+                "text": "1/2 bunch kale, stemmed, rinsed, chopped (about 3 cups)",
+                "weight": 48.0
             }
         ]
     },
-    "Rugby BBQ Pig": {
-        "url": "http://www.foodnetwork.com/recipes/rugby-bbq-pig-recipe.html",
+    "Chicken-Apple Sausage": {
+        "url": "http://www.eatingwell.com/recipe/249951/chicken-apple-sausage",
         "ingredients": [
             {
-                "text": "1 whole pig",
-                "weight": 6342.0
+                "text": "2 teaspoons canola oil",
+                "weight": 9.0
             },
             {
-                "text": "1 small can tomato paste",
-                "weight": 142.0
+                "text": "1 small onion, diced",
+                "weight": 70.0
             },
             {
-                "text": "I big can chipotle peppers",
-                "weight": 255.0
+                "text": "1 medium sweet apple, such as gala or honeycrisp, peeled and diced",
+                "weight": 180.44444444444446
             },
             {
-                "text": "1 1/2 cups red pepper flakes",
-                "weight": 125.39176177978516
+                "text": "1 pound ground chicken",
+                "weight": 453.59237
             },
             {
-                "text": "Pinch black peppercorns",
-                "weight": 0.14374999701976776
+                "text": "1 tablespoon finely chopped fresh sage",
+                "weight": 8.0
             },
             {
-                "text": "2 cups apple juice",
-                "weight": 496.0
+                "text": "1 tablespoon packed light brown sugar",
+                "weight": 13.75
             },
             {
-                "text": "1/2 gallon apple cider",
-                "weight": 1984.0
+                "text": "1/2 teaspoon fennel fennel seed, chopped",
+                "weight": 1.0
+            },
+            {
+                "text": "3/4 teaspoon salt",
+                "weight": 4.5
+            },
+            {
+                "text": "1/4 teaspoon freshly ground pepper",
+                "weight": 0.725
             }
         ]
     },
-    "Crispy Grilled Pig's Tails Recipe": {
-        "url": "http://www.seriouseats.com/recipes/2012/05/grilled-pigs-tails.html",
+    "Chicken Apple Arugula Goat Cheese Salad": {
+        "url": "http://simplyrecipes.com/recipes/chicken_apple_arugula_goat_cheese_salad/",
         "ingredients": [
-            {
-                "text": "6 pig tails (1 1/2 to 2 pounds)",
-                "weight": 793.78662109375
-            },
-            {
-                "text": "2 quarts stock low sodium store-bought or homemade chicken broth (or water)",
-                "weight": 1920.0
-            },
-            {
-                "text": "Kosher salt",
-                "weight": 16.2827197265625
-            },
             {
                 "text": "Olive oil",
-                "weight": 36.907498046875
-            }
-        ]
-    },
-    "Roast Whole Suckling Pig": {
-        "url": "http://chubbyhubby.net/recipes/roast-whole-suckling-pig/",
-        "ingredients": [
-            {
-                "text": "1 small suckling pig, gutted and cleaned, with the kidneys left within",
-                "weight": 4756.5
+                "weight": 13.432111014666665
             },
             {
-                "text": "olive oil",
-                "weight": 96.60487443847656
+                "text": "1 large shallot, peeled and sliced",
+                "weight": 80.0
             },
             {
-                "text": "sea salt and black pepper",
-                "weight": 42.61979754638672
+                "text": "1 1/2 lb skinless, boneless chicken breast, cut into 1 inch cubes",
+                "weight": 680.388555
             },
             {
-                "text": "sea salt and black pepper",
-                "weight": 21.30989877319336
+                "text": "Salt",
+                "weight": 5.92593133
             },
             {
-                "text": "4 red onions",
-                "weight": 500.0
+                "text": "1 tart green apple, thinly sliced",
+                "weight": 174.6
             },
             {
-                "text": "a dollop of duck fat",
-                "weight": 1268.0
+                "text": "Baby arugula leaves - enough for a salad for four",
+                "weight": 0.666666666666666
             },
             {
-                "text": "375 ml red wine",
-                "weight": 372.7995910644531
+                "text": "1/4 cup toasted walnuts, roughly chopped",
+                "weight": 7.0
             },
             {
-                "text": "kidneys of the pig, chopped",
+                "text": "1/4 cup goat cheese - broken up into little pieces",
+                "weight": 45.0
+            },
+            {
+                "text": "Lemon juice",
                 "weight": 0.0
             },
             {
-                "text": "1/2 loaf of day-old white bread, cubed",
-                "weight": 192.0
+                "text": "Salt and pepper",
+                "weight": 5.92593133
             },
             {
-                "text": "2 cloves of garlic, peeled and crushed",
-                "weight": 6.0
-            },
-            {
-                "text": "8 sage leaves, chopped",
-                "weight": 8.0
+                "text": "Salt and pepper",
+                "weight": 2.962965665
             }
         ]
     },
-    "Oven Roasted Suckling Pig, German Style recipes": {
-        "url": "http://www.cookingchanneltv.com/recipes/oven-roasted-suckling-pig-german-style.html",
+    "Chicken-Apple Sausage Bites with Hot Sweet Mustard": {
+        "url": "http://www.cookingchanneltv.com/recipes/michael-chiarello/chicken-apple-sausage-bites-with-hot-sweet-mustard-1960336",
         "ingredients": [
             {
-                "text": "One 13 to 18-pound suckling pig",
-                "weight": 7030.681640625
+                "text": "1 package frozen puff pastry, thawed",
+                "weight": 245.0
             },
             {
-                "text": "2 cups kosher salt",
-                "weight": 466.0
+                "text": "1 egg, well beaten",
+                "weight": 43.0
             },
             {
-                "text": "black pepper",
-                "weight": 27.82270609474182
+                "text": "3 chicken apple sausages, cooked and cut into thirds",
+                "weight": 75.0
             },
             {
-                "text": "1/2 cup fennel seed",
-                "weight": 45.74039077758789
+                "text": "1 cup spicy dijon mustard",
+                "weight": 249.0
             },
             {
-                "text": "1/2 cup fresh marjoram",
-                "weight": 26.81333351135254
+                "text": "1 cup spicy whole grain mustard",
+                "weight": 249.0
             },
             {
-                "text": "4 onions, quartered",
-                "weight": 500.0
+                "text": "1/2 cup honey",
+                "weight": 169.5
+            }
+        ]
+    },
+    "Chicken Apple Sausage Frittata": {
+        "url": "http://www.foodnetwork.com/recipes/chicken-apple-sausage-frittata-recipe-1910040",
+        "ingredients": [
+            {
+                "text": "1 teaspoon salt",
+                "weight": 6.0
             },
             {
-                "text": "3 heads garlic, cloves peeled and separated",
-                "weight": 150.0
+                "text": "2 tablespoons plus 1 teaspoons extra-virgin olive oil, divided",
+                "weight": 27.0
             },
             {
-                "text": "2 apples, halved",
-                "weight": 364.0
+                "text": "2 tablespoons plus 1 teaspoons extra-virgin olive oil, divided",
+                "weight": 4.5
             },
             {
-                "text": "1 lemon, halved",
-                "weight": 58.0
+                "text": "1/2 pound chicken-apple sausage, removed from casing",
+                "weight": 226.796185
             },
             {
-                "text": "1 bunch fresh thyme",
-                "weight": 15.0
+                "text": "1/2 cup red onion, diced",
+                "weight": 80.0
             },
             {
-                "text": "1 to 2 cups olive oil",
-                "weight": 324.0
+                "text": "2 tablespoons finely diced jalapeno",
+                "weight": 11.25
             },
             {
-                "text": "2 cups white wine or water",
-                "weight": 294.0
+                "text": "1/2 cup red bell pepper",
+                "weight": 74.5
+            },
+            {
+                "text": "8 eggs",
+                "weight": 344.0
+            },
+            {
+                "text": "1/2 cup milk",
+                "weight": 122.0
+            },
+            {
+                "text": "1/2 teaspoon paprika",
+                "weight": 1.15
+            },
+            {
+                "text": "1/2 teaspoon sea salt",
+                "weight": 2.4270833333333335
+            },
+            {
+                "text": "1 teaspoon black pepper",
+                "weight": 2.9
+            },
+            {
+                "text": "2 (9-inch) flour tortillas",
+                "weight": 98.0
+            },
+            {
+                "text": "1/4 cup jack cheese, shredded",
+                "weight": 28.25
+            },
+            {
+                "text": "1/4 cup Cheddar, shredded",
+                "weight": 28.25
+            },
+            {
+                "text": "1/2 cup tomatoes, diced",
+                "weight": 74.5
+            },
+            {
+                "text": "1/2 cup scallions diced",
+                "weight": 50.0
+            }
+        ]
+    },
+    "Chicken Apple Curry": {
+        "url": "http://www.goodhousekeeping.com/food-recipes/a5858/chicken-apple-curry-ghk1007/",
+        "ingredients": [
+            {
+                "text": "1 c. long-grain white rice",
+                "weight": 195.0
+            },
+            {
+                "text": "1 tbsp. olive oil",
+                "weight": 13.5
+            },
+            {
+                "text": "2 tsp. curry powder",
+                "weight": 4.0
+            },
+            {
+                "text": "1¼ lb. skinless, boneless chicken-breast halves",
+                "weight": 566.9904625
+            },
+            {
+                "text": "1 small onion",
+                "weight": 70.0
+            },
+            {
+                "text": "1 lb. Rome Beauty or Gala apples",
+                "weight": 453.59237
+            },
+            {
+                "text": "1 clove garlic",
+                "weight": 3.0
+            },
+            {
+                "text": "¾ c. chicken broth",
+                "weight": 180.0
+            },
+            {
+                "text": "⅓ c. dried apricot halves",
+                "weight": 43.33333333333333
+            },
+            {
+                "text": "½ tsp. salt",
+                "weight": 3.0
+            },
+            {
+                "text": "¼ tsp. coarsely ground black pepper",
+                "weight": 0.575
+            },
+            {
+                "text": "1 c. frozen peas",
+                "weight": 134.0
+            }
+        ]
+    },
+    "Chicken Apple Burgers": {
+        "url": "http://www.delish.com/cooking/recipe-ideas/recipes/a28333/chicken-apple-burgers-ghk1007/",
+        "ingredients": [
+            {
+                "text": "2 Granny Smith apples",
+                "weight": 349.2
+            },
+            {
+                "text": "½ tsp. poultry seasoning",
+                "weight": 0.75
+            },
+            {
+                "text": "½ tsp. salt",
+                "weight": 3.0
+            },
+            {
+                "text": "¼ tsp. ground black pepper",
+                "weight": 0.575
+            },
+            {
+                "text": "1 lb. ground chicken",
+                "weight": 453.59237
+            },
+            {
+                "text": "¼ c. finely chopped celery",
+                "weight": 25.25
+            },
+            {
+                "text": "4 Hamburger buns",
+                "weight": 168.0
+            },
+            {
+                "text": "½ c. whole-berry cranberry sauce",
+                "weight": 138.5
             }
         ]
     }
