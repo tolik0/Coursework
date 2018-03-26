@@ -13,3 +13,9 @@ model = KNeighborsClassifier(n_neighbors=5)
 model.fit(X_train, y_train)
 score = model.score(X_test, y_test)
 print(score)
+"""
+import numpy as np
+import PIL
+img = np.array(PIL.Image.open('test.jpg'))
+img = np.reshape(img, 151200)
+"""
