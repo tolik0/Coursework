@@ -7,24 +7,14 @@
 -------------
 Назва  | Вміст
 ----------------|----------------------
-**docs**|Файли з описом проекту, а також прогресу виконання роботи. 
-  weeks|Щотижневі звіти про виконання роботи.
+[**docs**](https://github.com/tolik0/Coursework/tree/master/docs)|Файли з описом проекту, а також прогресу виконання роботи. 
+  [weeks](https://github.com/tolik0/Coursework/tree/master/docs/weeks)|Щотижневі звіти про виконання роботи.
   Functionality_of_the_project.docx|Опис функціоналу проекту.
   Theme_of_coursework.docx|Перший етап курсової роботи. Опис теми роботи.
-**examples**|Файли з прикладами різних етапів курсової роботи.
+[**examples**](https://github.com/tolik0/Coursework/tree/master/examples)|Файли з прикладами різних етапів курсової роботи.
   JSON, XML, HTML.ipynb|Опис різних типів даних і приклади їх використання.
   __init__.py, loader.py, simple.|Файли для розпізнавання об'єктів на фото.
-**modules**|Основні файли прокту.
+[**modules**](https://github.com/tolik0/Coursework/tree/master/modules)|Основні файли прокту.
   file.json|Приклад файлу, який загружається з API.
   recipes.py|Файл, який використовується для загрузки з API.
 
-* [docs](https://github.com/tolik0/Coursework/tree/master/docs) - Файли з описом проекту, а також прогресу виконання роботи. 
-  * [weeks](https://github.com/tolik0/Coursework/tree/master/docs/weeks) - Щотижневі звіти про виконання роботи.
-  * Functionality_of_the_project.docx - Опис функціоналу проекту.
-  * Theme_of_coursework.docx - Перший етап курсової роботи. Опис теми роботи.
-* [examples](https://github.com/tolik0/Coursework/tree/master/examples) - Файли з прикладами різних етапів курсової роботи.
-  * JSON, XML, HTML.ipynb - Опис різних типів даних і приклади їх використання.
-  * __init__.py, loader.py, simple.py - Файли для розпізнавання об'єктів на фото.
-* [modules](https://github.com/tolik0/Coursework/tree/master/modules) - Основні файли прокту.
-  * file.json - приклад файлу, який загружається з API.
-  * recipes.py - файл, який використовується для загрузки з API.
