@@ -41,7 +41,7 @@ def get_edamam_json(q=None, r=None, app_id=None, app_key=None, fromi=None,
         assert isinstance(diet, list), 'diet must be of type list'
         diet_labels = ['balanced', 'high-protein', 'high-fiber', 'low-fat',
                        'low-carb,' 'low-sodium']
-        assert all(diet) in diet_labels, \
+        assert all(x in diet_labels for x in diet), \
             'all diet labels must be from {}'.format(diet_labels)
     if health:
         assert isinstance(health, list), 'health must be of type list'
@@ -54,7 +54,7 @@ def get_edamam_json(q=None, r=None, app_id=None, app_key=None, fromi=None,
                          'lupine-free', 'mustard-free', 'No-oil-added',
                          'pescatarian', 'pork-free', 'red-meat-free',
                          'sesame-free', 'sugar-conscious']
-        assert all(health) in health_labels, \
+        assert all(x in health_labels for x in health), \
             'all health labels must be from {}'.format(health_labels)
     if calories:
         assert any(re.match(regex, calories)
@@ -75,7 +75,7 @@ def get_edamam_json(q=None, r=None, app_id=None, app_key=None, fromi=None,
             'nutrients and nutrients_range must be of type list'
         assert len(nutrients_range) == len(nutrients),\
             'nutrients and nutrients_range must hav equal lengths'
-        assert all(nutrients) in nutrients_labels,\
+        assert all(x in nutrients_labels for x in nutrients),\
             'nutrients must be in {}'.format(nutrients_labels)
         for nutrient_range in nutrients_range:
             if not any(re.match(regex, nutrient_range)
