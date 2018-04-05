@@ -1,7 +1,7 @@
 from copy import deepcopy
 
 
-class Recipe:
+class Dish:
     '''Class representing a dish'''
     def __init__(self, name, url, image_url, portions, calories, weight,
                  ingredients, nutrients, daily_info, diet_labels,
@@ -30,7 +30,7 @@ class Recipe:
             raise TypeError('Wrong type of weight')
         self._weight = weight
 
-        if not isinstance(ingredients, list):
+        if not isinstance(ingredients, dict):
             raise TypeError('Wrong type of ingredients')
         self._ingredients = deepcopy(ingredients)
 
@@ -50,5 +50,9 @@ class Recipe:
             raise TypeError('Wrong type of health labels')
         self._health_labels = health_labels
 
-    def print_info(self):
-        
+    def __str__(self):
+        return self._name
+
+    def __repr__(self):
+        return self._name
+
