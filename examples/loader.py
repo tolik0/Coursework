@@ -19,9 +19,9 @@ def load_data(path):
         labels.append(product)
         images = os.listdir(os.path.join(path, product))
         for filename in images:
-            image = np.array(Image.open(os.path.join(path, product,
-                                                     filename)))
-            image.resize((50, 50))
+            img = Image.open(os.path.join(path, product, filename))
+            img.thumbnail((30, 30), Image.ANTIALIAS)
+            image = np.array(img)
             image = image.flatten()
             X.append(image)
             y.append(i)
