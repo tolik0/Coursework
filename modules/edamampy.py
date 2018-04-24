@@ -1,3 +1,4 @@
+# module with function to send request to EdamamAPI and get JSON response
 import requests
 import re
 
@@ -106,19 +107,3 @@ def get_edamam_json(q=None, r=None, app_id=None, app_key=None, fromi=None,
     r = requests.get(url, params=request_params)
 
     return r.json()
-
-
-def get_dishes_list(edamam_dict):
-    """
-
-    :param edamam_dict: dict returned by get_edamam_json function
-    :return: list of recommended dishes
-    """
-
-    dishes = list()
-    for dish in edamam_dict['hits']:
-        dishes.append(dish['recipe']['label'])
-
-    return dishes
-
-

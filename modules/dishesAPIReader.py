@@ -1,6 +1,7 @@
 from dish import Dish
 from edamampy import get_edamam_json
 from hidden import app_id, app_key
+import json
 
 
 class DishesAPIReader:
@@ -19,6 +20,11 @@ class DishesAPIReader:
                                          nutrients, nutrients_range)
         except AssertionError as e:
             print(e)
+
+    def load_file(self, path):
+        '''Load data from JSON-file'''
+        with open(path, 'r') as json_file:
+            self._data = json.load(json_file)
 
     def extract_dishes(self):
         '''Extract all dishes from file and store to a list as Dish objects'''

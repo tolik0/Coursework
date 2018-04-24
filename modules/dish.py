@@ -6,6 +6,7 @@ class Dish:
     def __init__(self, name, url, image_url, portions, calories, weight,
                  ingredients, nutrients, daily_info, diet_labels,
                  health_labels):
+        '''Create new Dish instance'''
         if not isinstance(name, str):
             raise TypeError('Wrong type of name')
         self._name = name
@@ -51,8 +52,22 @@ class Dish:
         self._health_labels = health_labels
 
     def __str__(self):
-        return self._name
+        """ Return str(self). """
+        return 'NAME: {}\nNUMBER OF PORTIONS: {}\nCALORIES: {}\nWEIGHT: {}\n' \
+               'INGREDIENTS: {}\nNUTRIENTS: {}\nDIET LABELS: {}\n' \
+               'HEALTH LABELS: {}\n\n'.format(self._name, self._portions,
+                                              self._calories, self._weight,
+                                              ', '.join(self.get_ingredients()),
+                                              ', '.join(self.get_nutrients()),
+                                              ', '.join(self._diet_labels),
+                                              ', '.join(self._health_labels))
 
     def __repr__(self):
+        """ Return repr(self). """
         return self._name
 
+    def get_ingredients(self):
+        return list(self._ingredients.keys())
+
+    def get_nutrients(self):
+        return list(self._nutrients.keys())
