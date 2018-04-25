@@ -23,22 +23,52 @@ def crop_minAreaRect(img, rect):
 
 
 def find_green_object(path):
+    boundaries = [(np.array([28, 10, 10]), np.array([80, 255, 255])), #green
+                  (np.array([10, 10, 10]), np.array([28, 255, 255]))] #yellow
+
+
     image = cv2.imread(path)
+    bordersize = 50
+    image = cv2.copyMakeBorder(image, top=bordersize, bottom=bordersize,
+                                left=bordersize, right=bordersize,
+                                borderType=cv2.BORDER_CONSTANT,
+                                value=[255, 255, 255])
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-    lower = np.array([20, 50, 50])
-    upper = np.array([100, 255, 255])
+    images = []
 
-    mask = cv2.inRange(hsv, lower, upper)
-    res = cv2.bitwise_and(image, image, mask=mask)
-    im2, contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE,
-                                                cv2.CHAIN_APPROX_SIMPLE)
-    index = []
+    for (lower, upper) in boundaries:
+        mask = cv2.inRange(hsv, lower, upper)
+        res = cv2.bitwise_and(image, image, mask=mask)
 
-    for i in range(len(contours)):
-        if len(contours[i]) < 50:
-            index.append(i)
+        im2, contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE,
+                                                    cv2.CHAIN_APPROX_SIMPLE)
+        index = []
 
-    contours = np.delete(contours, index)
-    rect = cv2.minAreaRect(max(contours, key=lambda x: len(x)))
-    image = crop_minAreaRect(image, rect)
-    return image
+        for i in range(len(contours)):
+            if len(contours[i]) < 50:
+                index.append(i)
+
+        contours = np.delete(contours, index)
+
+        for contour in contours:
+            rect = cv2.minAreaRect(contour)
+
+            # image1 = image.copy()
+            # box = cv2.boxPoints(rect)
+            # box = np.int0(box)
+            # cv2.drawContours(image1, [box], 0, (0, 0, 255), 2)
+            # cv2.imshow('image', image1)
+            # cv2.waitKey(0)
+
+            img = crop_minAreaRect(res, rect)
+            img[np.where((img == [0, 0, 0]).all(axis=2))] = [255, 255, 255]
+            images.append(img)
+
+    return images
+
+
+if __name__ == "__main__":
+    images = find_green_object("ban_app.jpg")
+    for i in range(len(images)):
+        cv2.imshow(f"{i}", images[i])
+    cv2.waitKey(0)
