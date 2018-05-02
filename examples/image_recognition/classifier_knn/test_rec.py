@@ -1,10 +1,9 @@
 # import the necessary packages
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
-import os
 from PIL import Image
-from loader import load_data
-from test_cv2 import find_green_object
+from examples.image_recognition.loader import load_data
+from examples.object_detection.test_cv2 import find_green_object
 import cv2
 
 
