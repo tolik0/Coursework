@@ -20,7 +20,7 @@ def load_data(path):
         images = os.listdir(os.path.join(path, product))
         for filename in images:
             img = Image.open(os.path.join(path, product, filename))
-            img.thumbnail((20, 20), Image.ANTIALIAS)
+            img.thumbnail((50, 50), Image.ANTIALIAS)
             image = np.array(img)
             image = image.flatten()
             X.append(image)
