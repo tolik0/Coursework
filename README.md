@@ -19,6 +19,4 @@
   [examples/image_recognition/object_detection](https://github.com/tolik0/Coursework/tree/master/examples/image_recognition/object_detection)|Модуль для знаходження об'єктів на фото
   [examples/image_recognition/test_images](https://github.com/tolik0/Coursework/tree/master/examples/image_recognition/test_images)|Зображення для тестування
 [**modules**](https://github.com/tolik0/Coursework/tree/master/modules)|Основні файли прокту.
-  file.json|Приклад файлу, який загружається з API.
-  recipes.py|Файл, який використовується для загрузки з API.
 
