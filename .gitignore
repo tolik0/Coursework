@@ -6,3 +6,4 @@ fruits-360/
 **/modules/__pycache__
 venv/
 examples/__pycache__
+examples/.ipynb_checkpoints
