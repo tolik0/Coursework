@@ -13,7 +13,8 @@ from sklearn.preprocessing import LabelEncoder
 import pandas
 import pickle
 from PIL import Image
-
+from keras import backend as K
+print(K.tensorflow_backend._get_available_gpus())
 
 seed = 7
 numpy.random.seed(seed)
