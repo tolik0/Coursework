@@ -1,9 +1,8 @@
 hidden.py
-examples/__pycache__/hidden.cpython-36.pyc
-modules/__pycache__/hidden.cpython-36.pyc
 .idea/
 fruits-360/
-**/modules/__pycache__
+modules/__pycache__
 venv/
 examples/__pycache__
 examples/.ipynb_checkpoints
+examples/image_recognition/__pycache__
