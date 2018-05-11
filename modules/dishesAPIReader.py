@@ -2,6 +2,7 @@ from dish import Dish
 from edamampy import get_edamam_json
 from hidden import app_id, app_key
 import json
+import ctypes
 
 
 class DishesAPIReader:
@@ -27,11 +28,13 @@ class DishesAPIReader:
             self._data = json.load(json_file)
 
     def extract_dishes(self):
-        '''Extract all dishes from file and store to a list as Dish objects'''
-        dishes_list = list()
+        '''Extract all dishes from file and store to an
+         array as Dish objects'''
+        ArrayType = ctypes.py_object * (self._data['to'] - self._data['from'])
+        dishes_array = ArrayType()
 
-        for dish in self._data['hits']:
-            recipe = dish['recipe']
+        for i in range(len(self._data['hits'])):
+            recipe = self._data['hits'][i]['recipe']
 
             name = recipe['label']
             url = recipe['url']
@@ -47,8 +50,8 @@ class DishesAPIReader:
             diet_labels = recipe['dietLabels']
             health_labels = recipe['healthLabels']
 
-            dishes_list.append(Dish(name, url, image_url, portions, calories,
-                                    weight, ingredients, nutrients, daily_info,
-                                    diet_labels, health_labels))
+            dishes_array[i] = Dish(name, url, image_url, portions, calories,
+                                   weight, ingredients, nutrients, daily_info,
+                                   diet_labels, health_labels)
 
-        return dishes_list
+        return dishes_array

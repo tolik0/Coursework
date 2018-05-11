@@ -8,4 +8,7 @@ print('data loaded')
 dishes = dish_reader.extract_dishes()
 dish_cont = DishesContainer(dishes)
 for dish in dish_cont:
-    print(dish)
+    print(dish._health_labels)
+    print(dish._daily_info)
+    print(dish._nutrients)
+    print('\n\n')

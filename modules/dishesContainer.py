@@ -5,8 +5,6 @@ class DishesContainer:
     '''Data structure that holds different dishes and gives
     tool to manage them'''
     def __init__(self, dishes):
-        if not isinstance(dishes, list):
-            raise TypeError('Dishes must be list.')
         if not all(isinstance(x, Dish) for x in dishes):
             raise ValueError('All objects inside dishes-list must be '
                              'of type Dish ')
