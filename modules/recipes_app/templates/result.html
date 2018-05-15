@@ -1,0 +1,244 @@
+<html>
+    <head>
+        <title> Recipe finder </title>
+        <link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,400,900" rel="stylesheet">
+        <style>
+            body, html {
+                width: 100%;
+                margin: 0;
+                font-family: 'Gothic A1', sans-serif;
+                font-weight: normal;
+            }
+            .content {
+                margin-right: 0;
+                margin-left: calc(50% - 500px);
+                width: 980px;
+            }
+            header {
+                width: 100%;
+                margin-top: 0;
+                display: block;
+                background-color: #009bff22;
+                height: 100px;
+            }
+            h1 {
+                color: #009bff;
+                padding-top: 18px;
+                font-size: 60px;
+                text-align: center;
+                vertical-align: center;
+            }
+
+            .description {
+                width: 100%;
+                font-size: 20px;
+                color: #111;
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 3px;
+
+                border-bottom: 3px solid #666;
+                border-top: 3px solid #666;
+            }
+            .loader {
+                position: absolute;
+                top: 136px;
+                width: 1000px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .loader > input[type=file] {
+                display: none;
+            }
+
+            .loaderHeader {
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                height: 40px;
+                font-size: 30px;
+                font-weight: normal;
+                text-align: center;
+                color: #51bfff;
+            }
+
+            .loader > #bottomLabel {
+                position: absolute;
+                top: 60px;
+                left: 100px;
+                width: 800px;
+                height: 400px;
+                background-color: #AAA4;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+            }
+            .loader > #bottomLabel div {
+                color: #111;
+                font-size: 24px;
+            }
+            .imageHolder {
+                position: absolute;
+                top: 60px;
+                left: 100px;
+                width: 800px;
+                height: 400px;
+                background-color: #AAA4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                pointer-events: none;
+            }
+            .imageHolder > img {
+                max-width: 790px;
+                max-height: 390px;
+            }
+            .loader > #topLabel {
+                position: absolute;
+                top: 60px;
+                left: 100px;
+                width: 800px;
+                height: 400px;
+                background-color: #FFF8;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+
+                opacity: 0;
+                transition: 0.3s;
+            }
+            .loader > #topLabel:hover {
+                opacity: 1;
+            }
+
+            .content > button {
+                margin-top: 420px;
+                margin-left: calc(500px - 100px);
+                width: 200px;
+                height: 40px;
+                background-color: #009bff;
+                font-size: 30px;
+                color: #FFF;
+                border: 1px solid #666;
+
+                transition: 0.2s;
+            }
+            .content > button:hover {
+                background-color: #009bff44;
+                color: #009bff;
+            }
+
+            .line {
+                width: 100%;
+                height: 0;
+                padding-bottom: 3px;
+
+                padding-top: 14px;
+                border-bottom: 3px solid #666;
+            }
+
+            .recipe {
+                margin-left: 100px;
+                width: 800px;
+                overflow-y: hidden;
+            }
+            .recipe > .title {
+                width: 800px;
+                height: 40px;
+                background-color: #009bff22;
+                color: #333;
+                font-size: 34px;
+                text-align: center;
+
+                cursor: pointer;
+            }
+
+            .recipe-content {
+                width: 800px;
+                font-size: 20px;
+                color: #666;
+            }
+            .recipe-content > h2 {
+                font-size: 24px;
+                padding-left: 0;
+                color: #009bff;
+            }
+
+
+        </style>
+
+        <script>
+            function loadFile(event){
+
+                var bottomLabel = document.getElementById('bottomLabel');
+                var imageHolder = document.getElementsByClassName('imageHolder')[0];
+                var topLabel = document.getElementById('topLabel');
+
+                var reader = new FileReader();
+
+                reader.onload = function(){
+                    var output = document.getElementById('uploadImage');
+                    output.src = reader.result;
+
+                    bottomLabel.style.display = 'none';
+                    imageHolder.style.display = 'flex';
+                    topLabel.style.display = 'flex';
+                };
+
+                reader.readAsDataURL(event.target.files[0]);
+            }
+
+            function hide(id){
+                var item = document.getElementById(id);
+                console.log(item);
+
+                if(item.style.maxHeight !== '40px'){
+                    item.style.maxHeight = '40px'
+                } else {
+                    item.style.maxHeight = '';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            <header> <h1> Recipe finder 3000 </h1> </header>
+            <div class="description"> An easy wesite for finding recipes </div>
+            <div class="loaderHeader"> Result Image </div>
+
+            <div class="loader">
+                <div class="imageHolder">
+                    <img id="uploadImage" alt="Your image" src="{{'image/' + image_url}}">
+                </div>
+            </div>
+            <button onclick="location.assign('/')"> Upload new </button>
+        </div>
+        <div class="content">
+            <div class="line"></div>
+            <div class="loaderHeader"> Result Recipes (Click to hide) </div>
+            {% for item in recipes %}
+            <div class="recipe" id="{{item.name}}" onclick="hide('{{ item.name }}')">
+                <div class="title"> {{item.name}} </div>
+                <div class="recipe-content">
+                    <h2> Ingredients </h2>
+                    <ul>
+                        {% for ingredient in item.ingredients %}
+                        <li> {{ingredient}} </li>
+                        {% endfor %}
+                    </ul>
+                    <h2> Preparation </h2>
+                    <p> {{ item.preparation }} </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
