@@ -7,3 +7,4 @@ examples/__pycache__
 examples/.ipynb_checkpoints
 examples/image_recognition/__pycache__
 examples/image_recognition/classifier_nn
+*.h5
