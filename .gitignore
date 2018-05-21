@@ -8,3 +8,7 @@ examples/.ipynb_checkpoints
 examples/image_recognition/__pycache__
 examples/image_recognition/classifier_nn
 *.h5
+
+unlabeled2017/
+hymenoptera_data/
+unlabeled2017.zip
