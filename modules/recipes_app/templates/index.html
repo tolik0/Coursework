@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title> Recipe finder </title>
+        <link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,400,900" rel="stylesheet">
+        <style>
+            body, html {
+                width: 100vw;
+                margin: 0;
+                font-family: 'Gothic A1', sans-serif;
+                font-weight: normal;
+            }
+            .contentUpload {
+                margin-left: calc(50vw - 500px);
+                width: 1000px;
+            }
+            header {
+                width: 100%;
+                margin-top: 0;
+                display: block;
+                background-color: #009bff22;
+                height: 100px;
+            }
+            h1 {
+                color: #009bff;
+                padding-top: 18px;
+                font-size: 60px;
+                text-align: center;
+                vertical-align: center;
+            }
+
+            .description {
+                width: 100%;
+                font-size: 20px;
+                color: #111;
+                text-align: center;
+                padding-top: 3px;
+                padding-bottom: 3px;
+
+                border-bottom: 3px solid #666;
+                border-top: 3px solid #666;
+            }
+            .loader {
+                position: absolute;
+                top: 136px;
+                width: 1000px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .loader > input[type=file] {
+                display: none;
+            }
+
+            .loaderHeader {
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                height: 40px;
+                font-size: 30px;
+                font-weight: normal;
+                text-align: center;
+                color: #51bfff;
+            }
+
+            .loader > #bottomLabel {
+                position: absolute;
+                top: 60px;
+                left: 100px;
+                width: 800px;
+                height: 400px;
+                background-color: #AAA4;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+            }
+            .loader > #bottomLabel div {
+                color: #111;
+                font-size: 24px;
+            }
+            .imageHolder {
+                position: absolute;
+                top: 60px;
+                left: 100px;
+                width: 800px;
+                height: 400px;
+                background-color: #AAA4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                pointer-events: none;
+            }
+            .imageHolder > img {
+                max-width: 790px;
+                max-height: 390px;
+            }
+            .loader > #topLabel {
+                position: absolute;
+                top: 60px;
+                left: 100px;
+                width: 800px;
+                height: 400px;
+                background-color: #FFF8;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+
+                opacity: 0;
+                transition: 0.3s;
+            }
+            .loader > #topLabel:hover {
+                opacity: 1;
+            }
+
+            .contentUpload > input[type=submit] {
+                margin-top: 420px;
+                margin-left: calc(500px - 100px);
+                width: 200px;
+                height: 40px;
+                background-color: #009bff;
+                font-size: 30px;
+                color: #FFF;
+                border: 1px solid #666;
+
+                transition: 0.2s;
+            }
+            .contentUpload > input[type=submit]:hover {
+                background-color: #009bff44;
+                color: #009bff;
+            }
+
+        </style>
+
+        <script>
+            function loadFile(event){
+
+                var bottomLabel = document.getElementById('bottomLabel');
+                var imageHolder = document.getElementsByClassName('imageHolder')[0];
+                var topLabel = document.getElementById('topLabel');
+
+                var reader = new FileReader();
+
+                reader.onload = function(){
+                    var output = document.getElementById('uploadImage');
+                    output.src = reader.result;
+
+                    bottomLabel.style.display = 'none';
+                    imageHolder.style.display = 'flex';
+                    topLabel.style.display = 'flex';
+                };
+
+                reader.readAsDataURL(event.target.files[0]);
+            }
+
+        </script>
+    </head>
+    <body>
+        <form class="contentUpload" method=post enctype=multipart/form-data>
+            <header> <h1> Recipe finder 3000 </h1> </header>
+            <div class="description"> An easy wesite for finding recipes </div>
+            <div class="loaderHeader"> Upload image </div>
+
+            <div class="loader">
+                <input type=file name=file accept="image/*" id="fileInput" onchange="loadFile(event)">
+                <label for="fileInput" id="bottomLabel">  Choose file  </label>
+                <div class="imageHolder" style="display: none;">
+                    <img id="uploadImage" alt="Your image" src="#">
+                </div>
+                <label for="fileInput" id="topLabel" style="display: none;">
+                    Choose another image </label>
+            </div>
+            <input type="submit" value="Upload">
+        </form>
+    </body>
+</html>
