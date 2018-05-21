@@ -12,3 +12,4 @@ examples/image_recognition/classifier_nn
 unlabeled2017/
 hymenoptera_data/
 unlabeled2017.zip
+*.pt
