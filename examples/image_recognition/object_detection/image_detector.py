@@ -22,9 +22,10 @@ def crop_minAreaRect(img, rect):
     return img_crop
 
 
-def find_green_object(path):
-    boundaries = [(np.array([28, 10, 10]), np.array([80, 255, 255])), #green
-                  (np.array([10, 10, 10]), np.array([28, 255, 255]))] #yellow
+def find_objects(path):
+    boundaries = [(np.array([10, 10, 10]), np.array([28, 255, 255])), #yellow
+                  (np.array([28, 10, 10]), np.array([80, 255, 255])), #green
+                  (np.array([0, 10, 10]), np.array([10, 255, 255]))] #red
 
 
     image = cv2.imread(path)
@@ -60,7 +61,7 @@ def find_green_object(path):
             # cv2.imshow('image', image1)
             # cv2.waitKey(0)
 
-            img = crop_minAreaRect(res, rect)
+            img = crop_minAreaRect(image, rect)
             img[np.where((img == [0, 0, 0]).all(axis=2))] = [255, 255, 255]
             images.append(img)
 
@@ -68,7 +69,7 @@ def find_green_object(path):
 
 
 if __name__ == "__main__":
-    images = find_green_object("ban_app.jpg")
+    images = find_objects("ban_app.jpg")
     for i in range(len(images)):
         cv2.imshow(f"{i}", images[i])
     cv2.waitKey(0)
