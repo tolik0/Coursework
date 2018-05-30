@@ -63,7 +63,7 @@ def find_objects(path):
 
             img = crop_minAreaRect(image, rect)
             img[np.where((img == [0, 0, 0]).all(axis=2))] = [255, 255, 255]
-            images.append(img)
+            images.append(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
     return images
 
