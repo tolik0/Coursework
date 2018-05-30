@@ -61,7 +61,7 @@ def find_objects(path):
             # cv2.imshow('image', image1)
             # cv2.waitKey(0)
 
-            img = crop_minAreaRect(res, rect)
+            img = crop_minAreaRect(image, rect)
             img[np.where((img == [0, 0, 0]).all(axis=2))] = [255, 255, 255]
             images.append(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 
