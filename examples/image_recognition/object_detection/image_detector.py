@@ -46,7 +46,7 @@ def find_objects(path):
         index = []
 
         for i in range(len(contours)):
-            if len(contours[i]) < 50:
+            if len(contours[i]) < 100:
                 index.append(i)
 
         contours = np.delete(contours, index)
