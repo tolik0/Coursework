@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, flash, send_file
 from werkzeug.utils import secure_filename
 import json
 import os
+from modules.dishes_finder import find_dishes
 
 
 UPLOAD_FOLDER = './images/'
@@ -47,11 +48,14 @@ def upload_file():
 
 def process_image(from_image_url):
     to_image_url = from_image_url
-    recipes = [{'name': 'Rec1', 'ingredients': [
-        'a', 'b', 'c', 'd'], 'preparation': 'Do something'}]
+    dishes = find_dishes(ingredients)
+    recipes = []
 
     return to_image_url, recipes
 
-app.secret_key = 'super secret key'
-app.config['SESSION_TYPE'] = 'filesystem'
-app.run(debug=True)
+
+if __name__ == '__main__':
+
+    app.secret_key = 'super secret key'
+    app.config['SESSION_TYPE'] = 'filesystem'
+    app.run(debug=True)
