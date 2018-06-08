@@ -32,7 +32,7 @@ class DishesAPIReader:
          array as Dish objects'''
         ArrayType = ctypes.py_object * (self._data['to'] - self._data['from'])
         dishes_array = ArrayType()
-
+        print('lenghfgrawuiygfilu: ',len(self._data['hits']))
         for i in range(len(self._data['hits'])):
             recipe = self._data['hits'][i]['recipe']
 

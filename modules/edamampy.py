@@ -105,5 +105,5 @@ def get_edamam_json(q=None, r=None, app_id=None, app_key=None, fromi=None,
     # make request to Edamam API
     url = 'https://api.edamam.com/search'
     r = requests.get(url, params=request_params)
-
+    print(r)
     return r.json()
