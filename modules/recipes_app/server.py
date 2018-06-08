@@ -3,6 +3,8 @@ from werkzeug.utils import secure_filename
 import json
 import os
 from modules.dishes_finder import find_dishes
+from modules.prefinal import detector
+import torch
 
 
 UPLOAD_FOLDER = './images/'
@@ -47,7 +49,8 @@ def upload_file():
 
 
 def process_image(from_image_url):
-    to_image_url = from_image_url
+    to_image_url = "recipes_app/images/res.jpg"
+    ingredients = detector(from_image_url)
     dishes = find_dishes(ingredients)
     recipes = []
 
@@ -58,4 +61,8 @@ if __name__ == '__main__':
 
     app.secret_key = 'super secret key'
     app.config['SESSION_TYPE'] = 'filesystem'
+
+    model_path = "mymodel_finetuning_new_v1.pth"
+    model = torch.load(model_path)
+
     app.run(debug=True)

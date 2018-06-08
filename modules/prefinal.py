@@ -129,9 +129,11 @@ def detector(model, image_path):
                 img[np.where((img == [0, 0, 0]).all(axis=2))] = [255, 255, 255]
                 images.append(img)
 
-        cv2.imshow('image', image1)
-        cv2.waitKey(0)
+        return cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
 
-        return image1
+    Image.fromarray(cv2.cvtColor(find_objects(image_path),
+                                 cv2.COLOR_BGR2RGB)).save(
+        "recipes_app/images/res.jpg")
 
-    return find_objects(image_path)
+
+    return ["tomato", "hyato", "pesun"]
