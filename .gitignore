@@ -14,3 +14,4 @@ hymenoptera_data/
 unlabeled2017.zip
 *.pt
 *.pth
+FIDS30/
