@@ -172,6 +172,11 @@
                 color: #009bff;
             }
 
+            .content {
+            	font-size: 20px;
+                color: #666;
+            }
+
 
         </style>
 
@@ -216,11 +221,20 @@
 
             <div class="loader">
                 <div class="imageHolder">
-                    <img id="uploadImage" alt="Your image"
-                         src="{{'image/' + image_url}}">
+                    <img id="uploadImage" alt="Your image" src="{{'images/' + image_url}}">
                 </div>
             </div>
             <button onclick="location.assign('/')"> Upload new </button>
+        </div>
+        <div class="content">
+        	<div class="line"></div>
+        	<div class="loaderHeader"> Fruits Detected </div>
+    			<ol>
+    				{% for item in fruits %}
+    				<li> {{ item }} </li>
+    				{% endfor %}
+    			</ol>
+        	</div>
         </div>
         <div class="content">
             <div class="line"></div>
