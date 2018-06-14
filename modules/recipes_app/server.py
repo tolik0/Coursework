@@ -1,9 +1,11 @@
-from flask import Flask, render_template, request, redirect, flash, send_file
+from flask import Flask, render_template, request, redirect, flash, \
+    send_from_directory
 from werkzeug.utils import secure_filename
 import torch
 import json
 import os
 import sys
+from datetime import datetime
 
 sys.path.append('../')
 from dishes_finder import find_dishes
@@ -18,7 +20,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/image/<name>')
 def get_image(name):
-    return send_file(os.path.join('images', name), as_attachment=True)
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               name)
 
 
 def allowed_file(filename):
@@ -53,22 +56,25 @@ def upload_file():
 
 
 def process_image(from_image_url):
-    to_image_url = "res.jpg"
+    to_image_url = "res{}.jpg".format(str(datetime.now()).
+                                      replace(":", "-").replace(" ", ""))
     print('from url: ', from_image_url)
-    ingredients = detector(model, from_image_url)
-    dishes = find_dishes(ingredients)
+    ingredients = detector(model, from_image_url, to_image_url)
+
     recipes = []
-    for dish in dishes:
-        recipes.append({'name': dish._name, 'ingredients':
-            dish.get_ingredients(), 'preparation': 'do something'})
+    # dishes = find_dishes(ingredients)
+    # for dish in dishes:
+    #     recipes.append({'name': dish._name, 'ingredients':
+    #         dish.get_ingredients(), 'preparation': 'do something'})
     return to_image_url, recipes
 
 
 if __name__ == '__main__':
+    app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.secret_key = 'super secret key'
-    app.config['SESSION_TYPE'] = 'filesystem'
-
     model_path = "../mymodel_finetuning_new_v1.pth"
     model = torch.load(model_path)
     print(os.getcwd())
+
     app.run(debug=True)

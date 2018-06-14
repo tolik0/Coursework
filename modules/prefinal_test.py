@@ -81,9 +81,9 @@ def detector(model, image_path, to_image_url):
                       # blue
                       (np.array([140, 20, 5]), np.array([160, 255, 255])),
                       # pink
-                      ((np.array([160, 20, 5]), np.array([179, 255, 255])),
-                       # red
-                       (np.array([0, 20, 5]), np.array([10, 255, 255])))]
+                      (np.array([160, 20, 5]), np.array([179, 255, 255])),
+
+                      (np.array([0, 20, 5]), np.array([10, 255, 255]))]
 
         image = cv2.imread(path)
         bordersize = 50
@@ -91,7 +91,6 @@ def detector(model, image_path, to_image_url):
                                    left=bordersize, right=bordersize,
                                    borderType=cv2.BORDER_CONSTANT,
                                    value=[255, 255, 255])
-
         image1 = image.copy()
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
         images = []
@@ -100,28 +99,32 @@ def detector(model, image_path, to_image_url):
             if type(lower) == tuple:
                 mask1 = cv2.inRange(hsv, lower[0], lower[1])
                 mask2 = cv2.inRange(hsv, upper[0], upper[1])
-                mask = mask1 | mask2
+                mask = cv2.bitwise_or(mask1, mask1, mask=mask2)
                 print(0)
             else:
                 mask = cv2.inRange(hsv, lower, upper)
 
+            res = cv2.bitwise_and(image, image, mask=mask)
+
             im2, contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE,
                                                         cv2.CHAIN_APPROX_SIMPLE)
-            new_contours = []
+            index = []
 
             for i in range(len(contours)):
-                if len(contours[i]) > 50:
-                    new_contours.append(contours[i])
+                if len(contours[i]) < 50:
+                    index.append(i)
 
-            contours = new_contours
+            contours = np.delete(contours, index)
 
             for contour in contours:
+                print(type(contour), contour)
                 rect = cv2.minAreaRect(contour)
 
                 box = cv2.boxPoints(rect)
                 box = np.int0(box)
                 startX, startY = min(box, key=lambda x: x[0])[0], \
                                  min(box, key=lambda x: x[1])[1]
+                cv2.drawContours(image1, [box], 0, (0, 0, 255), 2)
 
                 # display the prediction
                 img = crop_minAreaRect(image, rect)
@@ -130,28 +133,27 @@ def detector(model, image_path, to_image_url):
                 outputs = \
                     torch.nn.Softmax()(model(croped_image)).data.cpu().numpy()[
                         0]
-                print(outputs)
+
                 ind = outputs.argsort()[-3:][::-1]
                 ind_max = outputs.argsort()[-1:][::-1]
-                if names[ind[0]] != 'garbage':
-                    cv2.drawContours(image1, [box], 0, (0, 0, 255), 2)
-                    label = ""
-                    for i in ind:
-                        label += "  {}: {}%".format(names[i],
-                                                    round(outputs[i] * 100,
-                                                          1)) + "\n"
 
-                    for i in ind_max:
-                        ingr.append(names[i])
+                label = ""
+                for i in ind:
+                    label += "  {}: {}%".format(names[i],
+                                                round(outputs[i] * 100,
+                                                      1)) + "\n"
 
-                    y, dy = startY, 15
-                    for line in label.split('\n'):
-                        y += dy
-                        cv2.putText(image1, line, (startX, y),
-                                    cv2.FONT_HERSHEY_SIMPLEX, 0.4, 1)
+                for i in ind_max:
+                    ingr.append(names[i])
 
-                    img[np.where((img == [0, 0, 0]).all(axis=2))] = [255, 255, 255]
-                    images.append(img)
+                y, dy = startY, 15
+                for line in label.split('\n'):
+                    y += dy
+                    cv2.putText(image1, line, (startX, y),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.4, 1)
+
+                img[np.where((img == [0, 0, 0]).all(axis=2))] = [255, 255, 255]
+                images.append(img)
 
         return cv2.cvtColor(image1, cv2.COLOR_BGR2RGB), ingr
 
@@ -159,11 +161,9 @@ def detector(model, image_path, to_image_url):
 
     Image.fromarray(img).save("images/" + to_image_url)
     print(ingr)
-    ingr = list(set(ingr))
     return ingr
 
-
-if __name__ == "__main__":
-    model_path = "mymodel_finetuning_new_v1.pth"
-    model = torch.load(model_path)
-    detector(model, "test_images/banan.jpg")
+# if __name__ == "__main__":
+#     model_path = "mymodel_finetuning_new_v1.pth"
+#     model = torch.load(model_path)
+#     detector(model, "test_images/banan.jpg")
