@@ -46,12 +46,13 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            image_url, recipes = process_image(
+            image_url, recipes, ingredients = process_image(
                 os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             print(os.getcwd())
             return render_template('result.html',
-                                   image_url=image_url, recipes=recipes)
+                                   image_url=image_url, recipes=recipes,
+                                   fruits=ingredients)
     return render_template('index.html')
 
 
@@ -62,11 +63,11 @@ def process_image(from_image_url):
     ingredients = detector(model, from_image_url, to_image_url)
 
     recipes = []
-    # dishes = find_dishes(ingredients)
-    # for dish in dishes:
-    #     recipes.append({'name': dish._name, 'ingredients':
-    #         dish.get_ingredients(), 'preparation': 'do something'})
-    return to_image_url, recipes
+    dishes = find_dishes(ingredients)
+    for dish in dishes:
+        recipes.append({'name': dish._name, 'ingredients':
+            dish.get_ingredients(), 'preparation': 'do something'})
+    return to_image_url, recipes, ingredients
 
 
 if __name__ == '__main__':
